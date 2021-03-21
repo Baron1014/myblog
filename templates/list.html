@@ -1,0 +1,23 @@
+<!--list.html-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charest='utf-8'>
+<title> jay's song </title>
+</head>
+<body>
+<h2> good song </h2>
+<hr>
+<table width=400 border=1 bgcolor='#ccffcc'>
+    <tr><td>歌名</td><td>發佈時間</td></tr>
+{% for p in products %}
+    <tr>
+        <td>
+            <a href='/songlist/{{p.title}}/'>{{p.title}}</a>
+        </td>
+        <td>{{p.pub_date}}</td>
+    </tr>
+{% endfor %}
+</table>
+</body>
+</html>
