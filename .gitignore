@@ -2,3 +2,12 @@ mblog/__pycache__/*
 mainsite/migrations/__pycache__/*
 mainsite/__pycache__/*
 mblog/__pycache__/urls.cpython-38.pyc
+
+reference/
+
+.DS_Store
+
+.vscode/
+
+static/bst/
+static/scss/all.css.map
