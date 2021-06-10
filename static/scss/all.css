@@ -11457,4 +11457,9 @@ fieldset:disabled .btn {
     display: none !important;
   }
 }
+
+.navbar-expland-lg.container-fluid, .navbar-expland-lg.container-sm, .navbar-expland-lg.container-md, .navbar-expland-lg.container-lg, .navbar-expland-lg.container-xl, .navbar-expland-lg.container-xxl {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
 /*# sourceMappingURL=all.css.map */
