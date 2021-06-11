@@ -11458,13 +11458,27 @@ fieldset:disabled .btn {
   }
 }
 
-.navbar-expland-lg.container-fluid, .navbar-expland-lg.container-sm, .navbar-expland-lg.container-md, .navbar-expland-lg.container-lg, .navbar-expland-lg.container-xl, .navbar-expland-lg.container-xxl {
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-}
-
 .bg-gray800 {
   background-color: #343a40 !important;
 }
 
+#photo img {
+  width: 150px;
+  -webkit-box-shadow: 0 5px 10px;
+          box-shadow: 0 5px 10px;
+  border-radius: 50%;
+}
+
+.container {
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.page-header small, .page-header .small {
+  color: #777;
+  font-size: 60%;
+}
 /*# sourceMappingURL=all.css.map */

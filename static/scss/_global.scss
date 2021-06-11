@@ -1,7 +1,22 @@
-.navbar-expland-lg.container-fluid{
-    flex-wrap: nowrap;
-}
-
 .bg-gray800{
     background-color: #343a40 !important;
+}
+
+#photo img{
+    width:150px;
+    box-shadow: 0 5px 10px;
+    border-radius: 50%;
+}
+
+.container {
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.page-header small{
+    color: #777;
+    font-size: 60%;
 }
