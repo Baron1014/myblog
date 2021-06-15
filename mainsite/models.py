@@ -1,40 +1,47 @@
+from datetime import datetime
+from enum import unique
 from django.db import models
 from django.utils import timezone
 # Create your models here.
 
-class Post(models.Model):
-    title = models.CharField(max_length=200)
-    slug = models.CharField(max_length=200)
-    body = models.TextField()
-    pub_date = models.DateTimeField(default=timezone.now)
+class About(models.Model):
+    p_name =models.CharField(max_length=10)
+    text = models.TextField()
 
+    def __str__(self):
+        return self.p_name
+    
     class Meta:
-        ordering = ("-pub_date",)
-
-    def __str__(self):
-        return self.title
-
-class NewTable(models.Model):
-    bigint_f = models.BigIntegerField()
-    bool_f = models.BooleanField()
-    date_f = models.DateField(auto_now=True)
-    char_f = models.CharField(max_length=20, unique=True)
-    datetime_f = models.DateTimeField(auto_now_add=True)
-    decimal_f = models.FloatField(null=True)
-    float_f = models.FloatField(null=True)
-    int_f = models.IntegerField(default=2021)
-    text_f = models.TextField()
-
-class Product(models.Model):
-    SIZES = (
-        ('S', 'Small'),
-        ('M', 'Medium'),
-        ('L', 'Large')
+        ordering=['p_name']
+   
+class Education(models.Model):
+    DEGREES = (
+        ('Bachelor', 'bachelor'),
+        ('Master', 'master'),
+        ('Exchange Student', 'exchange'),
     )
-    sku = models.CharField(max_length=5)
-    name = models.CharField(max_length=20)
-    price = models.PositiveIntegerField()
-    size = models.CharField(max_length=1, choices=SIZES)
+    school = models.CharField(max_length=30)
+    degree = models.CharField(max_length=30, choices=DEGREES)
+    start_year = models.IntegerField(default=2015)
+    start_month = models.CharField(max_length=10, default="09")
+    graduate_year = models.IntegerField(blank=True, null=True)
+    graduate_month = models.CharField(max_length=10, blank=True, null=True)
+    department = models.CharField(max_length=50)
+    seq_id = models.IntegerField(unique=True)
 
     def __str__(self):
-        return self.name
+        return self.degree
+    
+    class Meta:
+       ordering=['-seq_id']
+        
+
+class Work(models.Model):
+    title = models.CharField(max_length=30)
+    department = models.CharField(max_length=30)
+    company = models.CharField(max_length=30)
+    start_year = models.IntegerField(default=2018)
+    start_month = models.CharField(max_length=10)
+    end_year = models.IntegerField(blank=True, null=True)
+    end_month = models.CharField(max_length=10, blank=True, null=True)
+    

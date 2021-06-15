@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap");
 /*!
  * Bootstrap v5.0.0-beta3 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -11469,16 +11470,63 @@ fieldset:disabled .btn {
   border-radius: 50%;
 }
 
-.container {
-  width: 100%;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
 .page-header small, .page-header .small {
   color: #777;
   font-size: 60%;
+}
+
+ul li {
+  padding-bottom: 0.5em;
+}
+
+ul li .opacity07:hover {
+  opacity: 1;
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 110%;
+}
+
+#navbarSupportedContent ul li {
+  padding-bottom: 0.25em;
+  padding-top: 0.25em;
+  opacity: 1;
+}
+
+.section hr {
+  width: 100%;
+  margin: 0 !important;
+}
+
+.section {
+  margin: 0 0 2em 0;
+}
+
+.section:hover hr {
+  background-color: #3CB371;
+  border-bottom: 3px solid #3CB371;
+  opacity: 1;
+}
+
+.navbar {
+  margin: 1em 0 2em 0;
+}
+
+.header {
+  padding-top: 0.5em;
+}
+
+h2:hover, .h2:hover {
+  font-weight: bold;
+}
+
+.heightlight {
+  font-size: 110%;
+  font-weight: bold;
+}
+
+.opacity07 {
+  opacity: 0.7;
 }
 /*# sourceMappingURL=all.css.map */

@@ -16,7 +16,7 @@
                 <ul class="dropdown-menu ">
                     <li><a class="dropdown-item" href="#">Persenal</a></li>
                     <li><a class="dropdown-item" href="#">Education</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <li><a class="dropdown-item" href="#">Work Experiences</a></li>
                 </ul>
             </li>
             <li class="nav-item">
@@ -32,6 +32,76 @@
     </div>
 {% endblock %}
 
+{% block content %}
+    <div class="container">
+        <div class="section" id="section_about">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>
+                        <span class='title'>About Me</span>
+                    </h2>
+                    <hr>
+                    <div class="content" id="about">
+                        <ul style="list-style-type:none">
+                            {% for about in abouts %}
+                            <li><sapn class="opacity07">{{ about.text }}</sapn></li>
+                            {% endfor %}
+                        </ur>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="section" id="section_education">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>
+                        <span class='title'>Education</span>
+                    </h2>
+                    <hr>
+                    <div class="content" id="education">
+                        <ul>
+                            {% for e in educations%}
+                            {% if e.graduate_year %}
+                            <li> <span class='heightlight'>{{ e.start_year }}/{{ e.start_month }} - {{ e.graduate_year }}/{{ e.graduate_month }}</span>
+                                 <span class="opacity07">{{ e.degree }},<br>{{ e.department }}, {{ e.school }}</span></li>
+                            {% else %}
+                            <li> <span class='heightlight'>{{ e.start_year }}/{{ e.start_month }} - Present</span> 
+                                <span class="opacity07">{{ e.degree }},<br>{{ e.department }}, {{ e.school }}</span></li>
+                            {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="section" id="section_work">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>
+                        <span class='title'>Work Experiences</span>
+                    </h2>
+                    <hr>
+                    <div class="content" id="work">
+                        <ul>
+                            {% for work in works reversed%}
+                            {% if work.end_year %}
+                            <li><span class="heightlight">{{ work.start_year }}/{{ work.start_month }} - {{ work.end_year }}/{{ work.end_month }}</span> <span class="opacity07">{{ work.title }},<br>{{ work.department }}, {{ work.company }}</span></li>
+                            {% else %}
+                            <li><span class="heightlight">{{ work.start_year }}/{{ work.start_month }} - Present</span> <span class="opacity07">{{ work.title }},<br>{{ work.department }}, {{ work.company }}</span></li>
+                            {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
 {% block songname %} {{song.name}} {% endblock %}
 {% block menu %}
                 <ul class='nav navbar-nav'>
@@ -43,7 +113,7 @@
                 </ul>
 {% endblock %}
 
-{% block content %}
+{% block contenta %}
         <div class='conatainer'>
             <div id="songcode" align="center">
                 {% if hour > 18 %}

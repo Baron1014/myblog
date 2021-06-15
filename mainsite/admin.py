@@ -1,11 +1,14 @@
 from django.contrib import admin
-from .models import Post
-from .models import NewTable, Product
+from .models import About, Education, Work
 # Register your models here.
 
-class PostAdmin(admin.ModelAdmin):
-    list_display=('title', 'slug', 'pub_date')
+class EducationAdmin(admin.ModelAdmin):
+    list_display=('degree','school', 'department', 'graduate_year')
+    ordering=('-degree', )
+ 
+class WorkAdmin(admin.ModelAdmin):
+    list_display=('title', 'department', 'company')
 
-admin.site.register(Post, PostAdmin)
-admin.site.register(NewTable)
-admin.site.register(Product)
+admin.site.register(About)
+admin.site.register(Education, EducationAdmin)
+admin.site.register(Work, WorkAdmin)
