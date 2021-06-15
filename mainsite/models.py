@@ -45,3 +45,13 @@ class Work(models.Model):
     end_year = models.IntegerField(blank=True, null=True)
     end_month = models.CharField(max_length=10, blank=True, null=True)
     
+
+class Honor(models.Model):
+    accept_year = models.IntegerField(default=2015)
+    award_name = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.award_name
+    class Meta:
+        ordering = ["-accept_year"]
+    

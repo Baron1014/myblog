@@ -10,4 +10,5 @@ def index(request):
     abouts = models.About.objects.all()
     educations = models.Education.objects.all()
     works = models.Work.objects.all()
+    honors = models.Honor.objects.all()
     return render(request, 'index.html', locals())

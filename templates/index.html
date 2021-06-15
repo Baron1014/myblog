@@ -14,13 +14,14 @@
                 About
                 </a>
                 <ul class="dropdown-menu ">
-                    <li><a class="dropdown-item" href="#">Persenal</a></li>
+                    <li><a class="dropdown-item" href="#">About Me</a></li>
                     <li><a class="dropdown-item" href="#">Education</a></li>
                     <li><a class="dropdown-item" href="#">Work Experiences</a></li>
+                    <li><a class="dropdown-item" href="#">Personal Honors</a></li>
                 </ul>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Paper</a>
+                <a class="nav-link disabled" href="#" tabindex="-1">Paper</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Competition</a>
@@ -100,29 +101,23 @@
             </div>
         </div>
     </div>
-{% endblock %}
-
-{% block songname %} {{song.name}} {% endblock %}
-{% block menu %}
-                <ul class='nav navbar-nav'>
-                    <li class='active'><a href='/'>Home</a></li>
-                    <li><a href="{% url 'tv-url' 0 %}"> 告白氣球</a></li>
-                    <li><a href="{% url 'tv-url' 1 %}"> 半島鐵盒</a></li>
-                    <li><a href="{% url 'tv-url' 2 %}"> 說好不哭</a></li>
-                    <li><a href="{% url 'tv-url' 3 %}"> 牛仔很忙</a></li>
-                </ul>
-{% endblock %}
-
-{% block contenta %}
-        <div class='conatainer'>
-            <div id="songcode" align="center">
-                {% if hour > 18 %}
-                    Afternoon
-                {% else %}
-                    GoodMorning
-                {% endif %}
-                <br>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/{{song.songcode}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="container">
+        <div class="section" id="section_honor">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>
+                        <span class='title'>Personal Honors</span>
+                    </h2>
+                    <hr>
+                    <div class="content" id="honor">
+                        <ul>
+                            {% for honor in honors%}
+                            <li><span class="opacity07">{{ honor.award_name }}, {{ honor.accept_year }}</span></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
 {% endblock %}
