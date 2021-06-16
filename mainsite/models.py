@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, date
 from enum import unique
 from django.db import models
 from django.utils import timezone
@@ -55,3 +55,15 @@ class Honor(models.Model):
     class Meta:
         ordering = ["-accept_year"]
     
+class Competition(models.Model):
+    award = models.CharField(max_length=50)
+    case_name = models.CharField(max_length=50)
+    company_name = models.CharField(max_length=80)
+    accept_day = models.DateField(default=date.today)
+    member = models.CharField(max_length=100, null=True)
+    
+    def __str__(self):
+        return self.case_name
+    
+    class Meta:
+        ordering=['-accept_day']

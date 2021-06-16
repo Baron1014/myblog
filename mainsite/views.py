@@ -11,4 +11,7 @@ def index(request):
     educations = models.Education.objects.all()
     works = models.Work.objects.all()
     honors = models.Honor.objects.all()
+    competitions = models.Competition.objects.all()
+    now = datetime.now()
+    format_now = now.strftime("%Y.%m")
     return render(request, 'index.html', locals())

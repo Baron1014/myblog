@@ -14,17 +14,17 @@
                 About
                 </a>
                 <ul class="dropdown-menu ">
-                    <li><a class="dropdown-item" href="#">About Me</a></li>
-                    <li><a class="dropdown-item" href="#">Education</a></li>
-                    <li><a class="dropdown-item" href="#">Work Experiences</a></li>
-                    <li><a class="dropdown-item" href="#">Personal Honors</a></li>
+                    <li><a class="dropdown-item" href="#section_about">About Me</a></li>
+                    <li><a class="dropdown-item" href="#section_education">Education</a></li>
+                    <li><a class="dropdown-item" href="#section_work">Work Experiences</a></li>
+                    <li><a class="dropdown-item" href="#section_honor">Personal Honors</a></li>
                 </ul>
             </li>
             <li class="nav-item">
                 <a class="nav-link disabled" href="#" tabindex="-1">Paper</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Competition</a>
+                <a class="nav-link" href="#section_competition">Competition</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Contact</a>
@@ -113,6 +113,28 @@
                         <ul>
                             {% for honor in honors%}
                             <li><span class="opacity07">{{ honor.award_name }}, {{ honor.accept_year }}</span></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="section" id="section_competition">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>
+                        <span class='title'>Competition</span>
+                    </h2>
+                    <hr>
+                    <div class="content" id="competition">
+                        <ul>
+                            {% for competition in competitions%}
+                            <li><span class="opacity07">{{ competition.award }}, {{ competition.case_name }}, {{competition.company_name}}, 
+                                {{competition.accept_day.year}}/{{competition.accept_day.month}}/{{competition.accept_day.day}}<br>
+                                {{ competition.member }}
+                                </span></li>
                             {% endfor %}
                         </ul>
                     </div>
