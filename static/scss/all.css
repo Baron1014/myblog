@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400&display=swap");
 /*!
  * Bootstrap v5.0.0-beta3 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -11533,6 +11533,7 @@ h2:hover, .h2:hover {
 }
 
 .opacity07 {
+  display: list-item;
   opacity: 0.7;
 }
 
