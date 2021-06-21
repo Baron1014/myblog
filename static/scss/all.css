@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400&display=swap");
 /*!
  * Bootstrap v5.0.0-beta3 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -11479,7 +11479,7 @@ ul li {
   padding-bottom: 0.5em;
 }
 
-ul li .opacity07:hover {
+ul li :hover {
   opacity: 1;
 }
 
@@ -11569,5 +11569,14 @@ h2:hover, .h2:hover {
 
 .row p {
   margin-top: 20px;
+}
+
+#club img {
+  width: 150px;
+  -webkit-box-shadow: 0 1px 5px;
+          box-shadow: 0 1px 5px;
+  border-radius: 50%;
+  margin-top: 15px;
+  margin-bottom: 20px;
 }
 /*# sourceMappingURL=all.css.map */

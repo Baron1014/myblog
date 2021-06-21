@@ -27,7 +27,10 @@
                 <a class="nav-link" href="#section_competition">Competition</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link" href="#section_club">Club</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#section_contact">Contact</a>
             </li>
         </ul>
     </div>
@@ -45,7 +48,7 @@
                     <div class="content" id="about">
                         <ul style="list-style-type:none">
                             {% for about in abouts %}
-                            <li><sapn class="opacity07">{{ about.text }}</sapn></li>
+                            <li><sapn class="opacity07 display-list-item">{{ about.text }}</sapn></li>
                             {% endfor %}
                         </ur>
                     </div>
@@ -53,6 +56,7 @@
             </div>
         </div>
     </div>
+
     <div class="container">
         <div class="section" id="section_education">
             <div class="row">
@@ -78,6 +82,7 @@
             </div>
         </div>
     </div>
+
     <div class="container">
         <div class="section" id="section_work">
             <div class="row">
@@ -90,7 +95,7 @@
                         <ul>
                             {% for work in works reversed%}
                             {% if work.end_year %}
-                            <li><span class="heightlight">{{ work.start_year }}/{{ work.start_month }} - {{ work.end_year }}/{{ work.end_month }}</span> <span class="opacity07">{{ work.title }},<br>{{ work.department }}, {{ work.company }}</span></li>
+                            <li><span class="heightlight">{{ work.start_year }}/{{ work.start_month }} - {{ work.end_year }}/{{ work.end_month }}</span> <span class="opacity07 ">{{ work.title }},<br>{{ work.department }}, {{ work.company }}</span></li>
                             {% else %}
                             <li><span class="heightlight">{{ work.start_year }}/{{ work.start_month }} - Present</span> <span class="opacity07">{{ work.title }},<br>{{ work.department }}, {{ work.company }}</span></li>
                             {% endif %}
@@ -101,6 +106,7 @@
             </div>
         </div>
     </div>
+
     <div class="container">
         <div class="section" id="section_honor">
             <div class="row">
@@ -112,7 +118,7 @@
                     <div class="content" id="honor">
                         <ul>
                             {% for honor in honors%}
-                            <li><span class="opacity07">{{ honor.award_name }}, {{ honor.accept_year }}</span></li>
+                            <li><span class="opacity07 display-list-item">{{ honor.award_name }}, {{ honor.accept_year }}</span></li>
                             {% endfor %}
                         </ul>
                     </div>
@@ -120,6 +126,7 @@
             </div>
         </div>
     </div>
+
     <div class="container">
         <div class="section" id="section_competition">
             <div class="row">
@@ -131,11 +138,51 @@
                     <div class="content" id="competition">
                         <ul>
                             {% for competition in competitions%}
-                            <li><span class="opacity07">{{ competition.award }}, {{ competition.case_name }}, {{competition.company_name}}, 
+                            <li><span class="opacity07 display-list-item">{{ competition.award }}, {{ competition.case_name }}, {{competition.company_name}}, 
                                 {{competition.accept_day.year}}/{{competition.accept_day.month}}/{{competition.accept_day.day}}<br>
                                 {{ competition.member }}
                                 </span></li>
                             {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="section" id="section_club">
+            <h2>
+                <span class='title'>Club</span>
+            </h2>
+            <hr>
+            <div class="content" id="club">
+                <div class="row justify-content-center">
+                    <div class='col-md-3 text-center'>
+                        <img src="static/images/bigdata.jpeg">
+                        <h5><span class="opacity07">Student Association<br><small>Big Data Management of Soochow University</small></span></h5>
+                    </div>
+                    <div class='col-md-3 text-center'>
+                        <img src="static/images/moas.jpg">
+                        <h5><span class="opacity07">Master of Association Seminar<br><small>Soochow University</small></span></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="section" id="section_contact">
+            <div class="row">
+                <div class="col-md-12 ">
+                    <h2>
+                        <span class='title'>Contact</span>
+                    </h2>
+                    <hr>
+                    <div class="content" id="contact">
+                        <ul>
+                            <li><span class="opacity07 display-list-item">Phone: 886-978-529836</span></li>
+                            <li><span class="opacity07 display-list-item">E-mail: baron1996.tw@gmail.com</span></li>
                         </ul>
                     </div>
                 </div>
