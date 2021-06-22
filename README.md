@@ -1,2 +1,2 @@
-# myblog
+# mblog
 Use Python Django

@@ -1,7 +1,7 @@
-myblog/__pycache__/*
+mblog/__pycache__/*
 mainsite/migrations/__pycache__/*
 mainsite/__pycache__/*
-myblog/__pycache__/urls.cpython-38.pyc
+mblog/__pycache__/urls.cpython-38.pyc
 
 reference/
 
