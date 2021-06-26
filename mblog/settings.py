@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '@sqric!f_f3@-*2lr!g(75c4b%web_*m9zx0t2zb+(&3o8hzjf'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -124,3 +124,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
 STATIC_ROOT = '/home/baron/staticfiles'
+
+# SSL
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
