@@ -69,10 +69,10 @@
                         <ul>
                             {% for e in educations%}
                             {% if e.graduate_year %}
-                            <li> <span class='heightlight'>{{ e.start_year }}/{{ e.start_month }} - {{ e.graduate_year }}/{{ e.graduate_month }}</span>
+                            <li> <span class='heightlight'>{{ e.start_year }}/{{ e.start_month }} ~ {{ e.graduate_year }}/{{ e.graduate_month }}</span>
                                  <span class="opacity07">{{ e.degree }},<br>{{ e.department }}, {{ e.school }}</span></li>
                             {% else %}
-                            <li> <span class='heightlight'>{{ e.start_year }}/{{ e.start_month }} - Present</span> 
+                            <li> <span class='heightlight'>{{ e.start_year }}/{{ e.start_month }} ~ Present</span> 
                                 <span class="opacity07">{{ e.degree }},<br>{{ e.department }}, {{ e.school }}</span></li>
                             {% endif %}
                             {% endfor %}
@@ -95,9 +95,9 @@
                         <ul>
                             {% for work in works reversed%}
                             {% if work.end_year %}
-                            <li><span class="heightlight">{{ work.start_year }}/{{ work.start_month }} - {{ work.end_year }}/{{ work.end_month }}</span> <span class="opacity07 ">{{ work.title }},<br>{{ work.department }}, {{ work.company }}</span></li>
+                            <li><span class="heightlight">{{ work.start_year }}/{{ work.start_month }} ~ {{ work.end_year }}/{{ work.end_month }}</span> <span class="opacity07 ">{{ work.title }},<br>{{ work.department }}, {{ work.company }}</span></li>
                             {% else %}
-                            <li><span class="heightlight">{{ work.start_year }}/{{ work.start_month }} - Present</span> <span class="opacity07">{{ work.title }},<br>{{ work.department }}, {{ work.company }}</span></li>
+                            <li><span class="heightlight">{{ work.start_year }}/{{ work.start_month }} ~ Present</span> <span class="opacity07">{{ work.title }},<br>{{ work.department }}, {{ work.company }}</span></li>
                             {% endif %}
                             {% endfor %}
                         </ul>
