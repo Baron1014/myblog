@@ -21,7 +21,7 @@
                 </ul>
             </li>
             <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1">Paper</a>
+                <a class="nav-link" href="#paper" tabindex="-1">Publications</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#section_competition">Competition</a>
@@ -99,6 +99,29 @@
                             {% else %}
                             <li><span class="heightlight">{{ work.start_year }}/{{ work.start_month }} ~ Present</span> <span class="opacity07">{{ work.title }},<br>{{ work.department }}, {{ work.company }}</span></li>
                             {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="section" id="paper">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>
+                        <span class='title'>Publications</span>
+                    </h2>
+                    <hr>
+                    <div class="content" id="publication">
+                        <ul>
+                            {% for paper in publications%}
+                            <li><span class="opacity07 display-list-item">{{ paper.members }}, "{{ paper.title }}," in Proc. {{paper.place}}, 
+                                {{paper.accept_month}} {{paper.accept_day.year}}, {{paper.city}}, {{paper.country}}. 
+                                [<a href="{{ paper.paper_link}}">Paper</a>]
+                                </span></li>
                             {% endfor %}
                         </ul>
                     </div>

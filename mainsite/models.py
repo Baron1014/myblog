@@ -57,13 +57,44 @@ class Honor(models.Model):
     
 class Competition(models.Model):
     award = models.CharField(max_length=50)
-    case_name = models.CharField(max_length=50)
+    case_name = models.CharField(max_length=100)
     company_name = models.CharField(max_length=80)
     accept_day = models.DateField(default=date.today)
     member = models.CharField(max_length=100, null=True)
     
     def __str__(self):
         return self.case_name
+    
+    class Meta:
+        ordering=['-accept_day']
+
+class Publications(models.Model):
+    members = models.CharField(max_length=100, null=True)
+    title = models.CharField(max_length=200)
+    place = models.CharField(max_length=200)
+    accept_day = models.DateField(default=date.today)
+    MONTH_CHOICES = [
+        ('Jan.', 'January'),
+        ('Feb.', 'February'),
+        ('Mar.', 'March'),
+        ('Apr.', 'April'),
+        ('May.', 'May'),
+        ('Jun.', 'June'),
+        ('Jul.', 'July'),
+        ('Aug.', 'August'),
+        ('Sep.', 'September'),
+        ('Oct.', 'October'),
+        ('Nov.', 'November'),
+        ('Dec.', 'December'),
+    ]
+
+    accept_month = models.CharField(max_length=10, choices=MONTH_CHOICES)
+    city = models.CharField(max_length=20)
+    country = models.CharField(max_length=20)
+    paper_link = models.URLField(max_length=200)
+    
+    def __str__(self):
+        return self.title
     
     class Meta:
         ordering=['-accept_day']
