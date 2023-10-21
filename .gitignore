@@ -13,3 +13,5 @@ static/bst/
 static/scss/all.css.map
 
 mainsite/migrations/
+
+db.sqlite3

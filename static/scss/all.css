@@ -11579,4 +11579,19 @@ h2:hover, .h2:hover {
   margin-top: 15px;
   margin-bottom: 20px;
 }
+
+#project {
+  margin-top: 20px;
+}
+
+.card-img-container {
+  height: 220px;
+  overflow: hidden; 
+}
+
+.card-img-container img {
+  width: 100%; 
+  height: auto; 
+}
+
 /*# sourceMappingURL=all.css.map */

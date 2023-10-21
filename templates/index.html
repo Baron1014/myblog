@@ -199,6 +199,40 @@
     </div>
 
     <div class="container">
+        <div class="section">
+            <h2>
+                <span class='title'>Projects</span>
+            </h2>
+        <hr>
+            <div class="content" id="project">
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    {% for project in projects%}
+                        <div class="col">
+                            <div class="card h-100 bg-light">
+                                <div class="card-img-container">
+                                    <img src={{project.image.url}} class="card-img-top" alt="Card image cap">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ project.title }}</h5>
+                                    <p class="card-text">{{ project.abstract}}</p>
+                                </div>
+                                <div class="card-footer">
+                                    {% if project.end_year %}
+                                    <small class="text-muted">{{project.start_year}}/{{project.start_month}} ~ {{project.end_year}}/{{project.end_month}}</small>
+                                    {% else %}
+                                    <small class="text-muted">{{project.start_year}}/{{project.start_month}} ~ Present</small>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                    
+                </div>
+            </div>
+    </div>
+    </div>
+
+    <div class="container">
         <div class="section" id="section_contact">
             <div class="row">
                 <div class="col-md-12 ">
