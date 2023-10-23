@@ -125,6 +125,7 @@ STATICFILES_DIRS = [
 ]
 STATIC_ROOT = '/home/baron/staticfiles'
 
+MEDIA_ROOT = '/var/www/myblog/'
 # SSL
 CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True

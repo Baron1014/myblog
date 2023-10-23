@@ -2,6 +2,9 @@ from datetime import datetime, date
 from enum import unique
 from django.db import models
 from django.utils import timezone
+from django.core.management import call_command
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 # Create your models here.
 
 class About(models.Model):
@@ -106,10 +109,14 @@ class Projects(models.Model):
     start_month = models.CharField(max_length=10, default="09")
     end_year = models.IntegerField(blank=True, null=True)
     end_month = models.CharField(max_length=10, blank=True, null=True)
-    image = models.ImageField(upload_to='static/images/upload/', width_field=None, height_field=None, default="static/images/default_image.jpeg")
+    image = models.ImageField(upload_to='static/images/upload', width_field=None, height_field=None, default="static/images/default_image.jpeg")
 
     def __str__(self):
         return self.title
     
     class Meta:
        ordering=['-start_year']
+
+@receiver(post_save, sender=Projects)
+def run_collectstatic(sender, instance, **kwargs):
+    call_command('collectstatic', interactive=False)
