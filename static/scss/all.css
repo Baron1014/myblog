@@ -11586,7 +11586,8 @@ h2:hover, .h2:hover {
 
 .card-img-container {
   height: 220px;
-  overflow: hidden; 
+  overflow: hidden;
+  box-shadow: 0 2px 2px;
 }
 
 .card-img-container img {
