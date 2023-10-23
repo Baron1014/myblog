@@ -123,7 +123,7 @@
                             {% for paper in publications%}
                             <li><span class="opacity07 display-list-item">{{ paper.members }}, "{{ paper.title }}," in Proc. {{paper.place}}, 
                                 {{paper.accept_month}} {{paper.accept_day.year}}, {{paper.city}}, {{paper.country}}. 
-                                [<a href="{{ paper.paper_link}}">Paper</a>]
+                                [<a href="{{ paper.paper_link}}" target="_blank">Paper</a>]
                                 </span></li>
                             {% endfor %}
                         </ul>
@@ -210,6 +210,7 @@
             <div class="content" id="project">
                 <div class="row row-cols-1 row-cols-md-3 g-4">
                     {% for project in projects%}
+                    <a href="{{project.link}}" target="_blank" style="color:inherit;text-decoration: none;">
                         <div class="col">
                             <div class="card h-100 bg-light">
                                 <div class="card-img-container">
@@ -228,6 +229,7 @@
                                 </div>
                             </div>
                         </div>
+                    </a>
                     {% endfor %}
                     
                 </div>

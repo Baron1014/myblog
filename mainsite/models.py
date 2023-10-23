@@ -110,6 +110,7 @@ class Projects(models.Model):
     end_year = models.IntegerField(blank=True, null=True)
     end_month = models.CharField(max_length=10, blank=True, null=True)
     image = models.ImageField(upload_to='static/images/upload', width_field=None, height_field=None, default="static/images/default_image.jpeg")
+    link = models.URLField(max_length=200)
 
     def __str__(self):
         return self.title

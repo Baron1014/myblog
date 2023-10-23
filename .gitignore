@@ -15,3 +15,5 @@ static/scss/all.css.map
 mainsite/migrations/
 
 db.sqlite3
+
+static/images/
