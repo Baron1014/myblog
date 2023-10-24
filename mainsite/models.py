@@ -105,8 +105,8 @@ class Publications(models.Model):
 class Projects(models.Model):
     title = models.CharField(max_length=18)
     abstract = models.TextField(max_length=250)
-    start_year = models.IntegerField(default=2015)
-    start_month = models.CharField(max_length=10, default="09")
+    start_year = models.IntegerField(default=datetime.now().year)
+    start_month = models.CharField(max_length=10, default=str(datetime.now().month))
     end_year = models.IntegerField(blank=True, null=True)
     end_month = models.CharField(max_length=10, blank=True, null=True)
     image = models.ImageField(upload_to='static/images/upload', width_field=None, height_field=None, default="static/images/default_image.jpeg")
@@ -116,7 +116,7 @@ class Projects(models.Model):
         return self.title
     
     class Meta:
-       ordering=['-start_year']
+       ordering=['-start_year', '-start_month']
 
 @receiver(post_save, sender=Projects)
 def run_collectstatic(sender, instance, **kwargs):
