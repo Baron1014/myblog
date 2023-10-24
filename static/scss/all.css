@@ -11588,6 +11588,7 @@ h2:hover, .h2:hover {
   height: 220px;
   overflow: hidden;
   box-shadow: 0 2px 2px;
+  background-color: white;
 }
 
 .card-img-container img {
